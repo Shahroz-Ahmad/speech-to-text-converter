@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Marko One", serif;
+    background-color: #f8f8f8;
+    /* overflow: hidden;     */
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./photo-1518640467707-6811f4a6ab73.avif);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    gap: 2rem;
+    animation: moving 6s infinite;
+}
+@keyframes moving {
+        0%{
+            background-position-y: -550px ;
+                }
+        50%{
+background-position-y: -500px ;
+
+        }
+        100%{
+            background-position-y: -550px ;
+
+        }
+}
+
+/* .main {
+    background-color: #d6d6cc4a;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid #c2c9c1;
+} */
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: -1px -1px 10px white,
+        1px -1px 5px white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+    padding: 0px 10px;
+    color: black;
+
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    border: 2px solid #c2c9c1;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    resize: none;
+    outline: none;
+    background-color: #c2c9c19a;
+}
+
+.btnMain {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    background-color: #50ADA7;
+    border: none;
+    box-shadow: -4px 8px 6px rgba(0, 0, 0, 0.571);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    outline: none;
+    border: 2px solid #c2c9c1;
+}
+
+button:hover {
+    background-color: #044653;
+    color: white;
+    transition: 0.5s all;
+}
+
+.front {
+    background-color: #d6d6cc4a;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid #c2c9c1;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    backface-visibility: hidden;
+    transition: transform 1s;
+
+}
+
+.back {
+    background-color: #d6d6cc4a;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #c2c9c1;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: transform 1s;
+}
+
+.flip {
+    height: 50%;
+    width: 500px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.FlipFront {
+    transform: rotateY(-180deg);
+}
+
+.flipBack {
+    transform: rotateY(0deg);
+}
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    width: 8.5em;
+    height: 3.3em;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0rem;
+    height: 0rem;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f0f0f06f;
+    transition: 0.5s;
+    border-radius: 30px;
+    border: 2px solid #c2c9c1;
+
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 28px;
+    border-radius: 20px;
+    left: 13px;
+    bottom: 14px;
+    background: linear-gradient(100deg, #044653, #85acb5 50%, #c2c9c1);
+    transition: 0.5s;
+    
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(5.1em);
+    background: linear-gradient(200deg, #044653, #85acb5 50%, #c2c9c1);
+}
+
+.heading {
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    text-shadow: -1px -1px 10px white,
+        1px -1px 5px white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
