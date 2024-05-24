@@ -22,7 +22,7 @@ body {
     gap: 2rem;
     animation: moving 6s infinite;
 }
-@keyframes moving {
+/* @keyframes moving {
         0%{
             background-position-y: -550px ;
                 }
@@ -34,7 +34,7 @@ background-position-y: -500px ;
             background-position-y: -550px ;
 
         }
-}
+} */
 
 /* .main {
     background-color: #d6d6cc4a;
