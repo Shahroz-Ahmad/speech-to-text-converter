@@ -16,7 +16,7 @@ let flipFront = document.querySelector('.front')
 
         let voice = new webkitSpeechRecognition();
         console.log(voice);
-        voice.lang = 'ur-PK'
+        voice.lang = 'en-US'
         voice.interimResults = true;
         voice.continuous = true;
         console.log(voice.continuous, voice.interimResults);
@@ -46,6 +46,6 @@ let flipFront = document.querySelector('.front')
         SpeakBtn.addEventListener('click', () => {
             let msg = new SpeechSynthesisUtterance();
             msg.text = output2.value;
-            msg.lang = 'ur-PK';
+            msg.lang = 'en-US';
             speechSynthesis.speak(msg);
         });
