@@ -14,21 +14,18 @@ let output1 = document.querySelector('#outputOfTextToSpeech');
 let output2 = document.querySelector('#outputOfSpeechToText')
 console.log(StartBtn, StopBtn);
 
-<<<<<<< HEAD
 let voice = new webkitSpeechRecognition();
 console.log(voice);
 voice.lang = 'en-US'
 voice.interimResults = true;
 voice.continuous = true;
 console.log(voice.continuous, voice.interimResults);
-=======
         let voice = new webkitSpeechRecognition();
         console.log(voice);
         voice.lang = 'en-US'
         voice.interimResults = true;
         voice.continuous = true;
         console.log(voice.continuous, voice.interimResults);
->>>>>>> 78b75797e82e69599238fe181ed58905ad7ba8eb
 
 
 let voiceStart = false
@@ -52,18 +49,15 @@ navigator.mediaDevices.getUserMedia({ audio: true })
 
 let SpeakBtn = document.querySelector('#speak');
 
-<<<<<<< HEAD
 SpeakBtn.addEventListener('click', () => {
     let msg = new SpeechSynthesisUtterance();
     msg.text = output2.value;
     msg.lang = 'en-US';
     speechSynthesis.speak(msg);
 });
-=======
         SpeakBtn.addEventListener('click', () => {
             let msg = new SpeechSynthesisUtterance();
             msg.text = output2.value;
             msg.lang = 'en-US';
             speechSynthesis.speak(msg);
         });
->>>>>>> 78b75797e82e69599238fe181ed58905ad7ba8eb
